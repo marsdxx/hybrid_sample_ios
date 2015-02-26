@@ -54,6 +54,7 @@
     self.nameTextField = [[UITextField alloc]initWithFrame:CGRectMake(defaultPaddingLeft + labelWidth, defaultPaddingTop + 10, 210, 30)];
     self.nameTextField.placeholder = @"Please input user name";
     self.nameTextField.tag = 1;
+    self.nameTextField.keyboardType = UIKeyboardTypeASCIICapable;
     [self.nameTextField setSecureTextEntry:NO];
     self.nameTextField.font = [UIFont systemFontOfSize:14];
     self.nameTextField.delegate = self;
@@ -62,7 +63,8 @@
     [self.view addSubview: self.nameTextField];
     self.passwordTextField = [[UITextField alloc]initWithFrame:CGRectMake(defaultPaddingLeft + labelWidth, defaultPaddingTop + 60, 210, 30)];
     self.passwordTextField.placeholder = @"Please input password";
-    self.passwordTextField.tag = 1;
+    self.passwordTextField.tag = 2;
+    self.passwordTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     [self.passwordTextField setSecureTextEntry:NO];
     self.passwordTextField.font = [UIFont systemFontOfSize:14];
     self.passwordTextField.delegate = self;
